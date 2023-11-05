@@ -61,35 +61,25 @@ def s_tier2(message: Message):
     if add_pic(x=351, y=11, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите второе изображение для категории S', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, s_tier3)
-    else:
-        pass
 
 def s_tier3(message: Message):
     if add_pic(x=698, y=11, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите третье изображение для категории S', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, s_tier4)
-    else:
-        pass
 
 def s_tier4(message: Message):
     if add_pic(x=1052, y=11, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите четвертое изображение для категории S', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, s_tier5)
-    else:
-        pass
 
 def s_tier5(message: Message):
     if add_pic(x=1407, y=11, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите пятое изображение для категории S', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, s_tier6)
-    else:
-        pass
 
 def s_tier6(message: Message):
     if add_pic(x=1761, y=11, message=message) == True:
         bot.send_message(message.chat.id, 'Категория S готова!', reply_markup=btn.TierMenu)
-    else:
-        pass
 
 @bot.callback_query_handler(func=lambda callback: callback.data=='A')
 def a_tier(callback):
@@ -100,35 +90,25 @@ def a_tier2(message: Message):
     if add_pic(x=351, y=350, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите второе изображение для категории A', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, a_tier3)
-    else:
-        pass
 
 def a_tier3(message: Message):
     if add_pic(x=698, y=350, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите третье изображение для категории A', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, a_tier4)
-    else:
-        pass
 
 def a_tier4(message: Message):
     if add_pic(x=1052, y=350, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите четвертое изображение для категории A', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, a_tier5)
-    else:
-        pass
 
 def a_tier5(message: Message):
     if add_pic(x=1407, y=350, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите пятое изображение для категории A', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, a_tier6)
-    else:
-        pass
 
 def a_tier6(message: Message):
     if add_pic(x=1761, y=350, message=message) == True:
         bot.send_message(message.chat.id, 'Категория A готова!', reply_markup=btn.TierMenu)
-    else:
-        pass
 
 @bot.callback_query_handler(func=lambda callback: callback.data=='B')
 def b_tier(callback):
@@ -139,35 +119,25 @@ def b_tier2(message: Message):
     if add_pic(x=351, y=690, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите второе изображение для категории B', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, b_tier3)
-    else:
-        pass
 
 def b_tier3(message: Message):
     if add_pic(x=698, y=690, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите третье изображение для категории B', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, b_tier4)
-    else:
-        pass
 
 def b_tier4(message: Message):
     if add_pic(x=1052, y=690, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите четвертое изображение для категории B', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, b_tier5)
-    else:
-        pass
 
 def b_tier5(message: Message):
     if add_pic(x=1407, y=690, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите пятое изображение для категории B', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, b_tier6)
-    else:
-        pass
 
 def b_tier6(message: Message):
     if add_pic(x=1761, y=690, message=message) == True:
         bot.send_message(message.chat.id, 'Категория B готова!', reply_markup=btn.TierMenu)
-    else:
-        pass
 
 @bot.callback_query_handler(func=lambda callback: callback.data=='C')
 def c_tier(callback):
@@ -178,35 +148,25 @@ def c_tier2(message: Message):
     if add_pic(x=351, y=1029, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите второе изображение для категории C', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, c_tier3)
-    else:
-        pass
 
 def c_tier3(message: Message):
     if add_pic(x=698, y=1029, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите третье изображение для категории C', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, c_tier4)
-    else:
-        pass
 
 def c_tier4(message: Message):
     if add_pic(x=1052, y=1029, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите четвертое изображение для категории C', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, c_tier5)
-    else:
-        pass
 
 def c_tier5(message: Message):
     if add_pic(x=1407, y=1029, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите пятое изображение для категории C', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, c_tier6)
-    else:
-        pass
 
 def c_tier6(message: Message):
     if add_pic(x=1761, y=1029, message=message) == True:
         bot.send_message(message.chat.id, 'Категория C готова!', reply_markup=btn.TierMenu)
-    else:
-        pass
 
 @bot.callback_query_handler(func=lambda callback: callback.data=='D')
 def d_tier(callback):
@@ -217,35 +177,25 @@ def d_tier2(message: Message):
     if add_pic(x=351, y=1368, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите второе изображение для категории D', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, d_tier3)
-    else:
-        pass
 
 def d_tier3(message: Message):
     if add_pic(x=698, y=1368, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите третье изображение для категории D', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, d_tier4)
-    else:
-        pass
 
 def d_tier4(message: Message):
     if add_pic(x=1052, y=1368, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите четвертое изображение для категории D', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, d_tier5)
-    else:
-        pass
 
 def d_tier5(message: Message):
     if add_pic(x=1407, y=1368, message=message) == True:
         msg = bot.send_message(message.chat.id, 'Загрузите пятое изображение для категории D', reply_markup=btn.StopMenu)
         bot.register_next_step_handler(msg, d_tier6)
-    else:
-        pass
 
 def d_tier6(message: Message):
     if add_pic(x=1761, y=1368, message=message) == True:
         bot.send_message(message.chat.id, 'Категория D готова!', reply_markup=btn.TierMenu)
-    else:
-        pass
 
 @bot.callback_query_handler(func=lambda callback: callback.data=='delete')
 def delete(callback):
@@ -256,10 +206,6 @@ def delete(callback):
         begin(callback)
     else:
         bot.send_message(callback.message.chat.id, 'Тир-лист не найден!')
-
-@bot.callback_query_handler(func=lambda callback: callback.data=='stop')
-def stop(callback):
-    begin(callback)
 
 
 if __name__ == '__main__':
