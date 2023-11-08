@@ -25,7 +25,7 @@
 
 
 ## Usage
-This repository is already configured for using on hostings. Review [installation](#installation) steps.
+This repository is already configured for using on hostings (including multi-user). Review [installation](#installation) steps.
 
 
 ## Installation
