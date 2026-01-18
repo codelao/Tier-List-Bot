@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import telebot
 import buttons as btn
@@ -6,7 +8,7 @@ from telebot.types import Message
 from PIL import Image
 
 
-bot = telebot.TeleBot(cfg.TOKEN)
+bot = telebot.TeleBot(cfg.__token__)
 
 
 def add_pic(x, y, message: Message):
@@ -14,19 +16,19 @@ def add_pic(x, y, message: Message):
         try:
             image_get = bot.get_file(message.photo[-1].file_id)
             image = bot.download_file(image_get.file_path)
-            with open(cfg.PATH+'/user_images/image_'+str(message.chat.id)+'.png', 'wb') as new_image:
+            with open(cfg.__path__+'/user_images/image_'+str(message.chat.id)+'.png', 'wb') as new_image:
                 new_image.write(image)
-            if os.path.exists(cfg.PATH+'/user_images/tier_list_'+str(message.chat.id)+'.png'):
-                tier_list = Image.open(cfg.PATH+'/user_images/tier_list_'+str(message.chat.id)+'.png')
+            if os.path.exists(cfg.__path__+'/user_images/tier_list_'+str(message.chat.id)+'.png'):
+                tier_list = Image.open(cfg.__path__+'/user_images/tier_list_'+str(message.chat.id)+'.png')
             else:
                 tier_list = Image.open(cfg.IMAGE)
-            tier_image = Image.open(cfg.PATH+'/user_images/image_'+str(message.chat.id)+'.png')
+            tier_image = Image.open(cfg.__path__+'/user_images/image_'+str(message.chat.id)+'.png')
             tier_image = tier_image.resize((330, 322))
             tier_list.paste(tier_image, (x,y))
-            tier_list.save(cfg.PATH+'/user_images/tier_list_'+str(message.chat.id)+'.png')
-            with open (cfg.PATH+'/user_images/tier_list_'+str(message.chat.id)+'.png', 'rb') as user_tier_list:
+            tier_list.save(cfg.__path__+'/user_images/tier_list_'+str(message.chat.id)+'.png')
+            with open (cfg.__path__+'/user_images/tier_list_'+str(message.chat.id)+'.png', 'rb') as user_tier_list:
                 bot.send_photo(message.chat.id, user_tier_list, caption='Ваш тир-лист сейчас выглядит так')
-                os.remove(cfg.PATH+'/user_images/image_'+str(message.chat.id)+'.png')
+                os.remove(cfg.__path__+'/user_images/image_'+str(message.chat.id)+'.png')
                 return True
         except:
             bot.send_message(message.chat.id, 'Неизвестная ошибка!\nПроверьте ваше изображение либо попробуйте снова.', reply_markup=btn.StopMenu)
@@ -44,8 +46,8 @@ def start(message: Message):
 @bot.callback_query_handler(func=lambda callback: callback.data=='begin')
 def begin(callback):
     bot.delete_message(chat_id=callback.message.chat.id , message_id=callback.message.message_id)
-    if os.path.exists(cfg.PATH+'/user_images/tier_list_'+str(callback.message.chat.id)+'.png'):
-        with open(cfg.PATH+'/user_images/tier_list_'+str(callback.message.chat.id)+'.png', 'rb') as image:
+    if os.path.exists(cfg.__path__+'/user_images/tier_list_'+str(callback.message.chat.id)+'.png'):
+        with open(cfg.__path__+'/user_images/tier_list_'+str(callback.message.chat.id)+'.png', 'rb') as image:
             bot.send_message(callback.message.chat.id, 'Обнаружен сохраненный тир-лист', reply_markup=btn.DeleteMenu)
             bot.send_photo(callback.message.chat.id, image, reply_markup=btn.TierMenu)
     else:
@@ -200,8 +202,8 @@ def d_tier6(message: Message):
 @bot.callback_query_handler(func=lambda callback: callback.data=='delete')
 def delete(callback):
     bot.delete_message(chat_id=callback.message.chat.id, message_id=callback.message.message_id)
-    if os.path.exists(cfg.PATH+'/user_images/tier_list_'+str(callback.message.chat.id)+'.png'):
-        os.remove(cfg.PATH+'/user_images/tier_list_'+str(callback.message.chat.id)+'.png')
+    if os.path.exists(cfg.__path__+'/user_images/tier_list_'+str(callback.message.chat.id)+'.png'):
+        os.remove(cfg.__path__+'/user_images/tier_list_'+str(callback.message.chat.id)+'.png')
         bot.send_message(callback.message.chat.id, 'Тир-лист успешно удален!')
         begin(callback)
     else:
