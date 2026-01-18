@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  Easy-to-use tier list maker in Telegram
+  Create a tier list through the chat
 </p>
 
 
@@ -11,28 +11,35 @@
 * [Installation](#installation)
 
 
-## Screenshots
-### Example of making a Marvel and DC superheroes tier list:
-<p>
-  <img src="README_images/start-image.png" width="25%"></br>
-  <img src="README_images/begin-image.png" width="25%"></br>
-  <img src="README_images/put-image.png" width="25%"></br>
-  <img src="README_images/saved-image.png" width="25%"></br>
-  <img src="README_images/wrong-image.png" width="25%"></br>
-  <img src="README_images/ready-image.png" width="25%"></br>
-  <img src="README_images/finished-image.png" width="25%">
+### Example of making a Marvel & DC superheroes tier list:
+<p style="white-space: nowrap;">
+  <img src="https://i.imgur.com/1tqUpZ3.png" width="30%">
 </p>
+<p style="white-space: nowrap;">
+  <img src="https://i.imgur.com/RBtJCyv.png" width="30%">
+  <img src="https://i.imgur.com/16J0Lqc.png" width="30%">
+  <img src="https://i.imgur.com/bzOiNJA.png" width="30%"></br>
+</p>
+
+#### Progress saving:
+<img src="https://i.imgur.com/Q21WXdB.png" width="30%">
+
+#### No file support by default:
+<img src="https://i.imgur.com/tkajKuO.png" width="30%">
+
+#### Local output:
+<img src="https://i.imgur.com/uymaCGU.png" width="65%">
+
 
 
 ## Usage
-This repository is already configured for using on hostings (including multi-user). Review [installation](#installation) steps.
+This repository is already configured for deployment on hosting (including multi-user). Review [installation](#installation) steps.
 
 
 ## Installation
-First of all, you need to set environment variable *TIERLIST_BOT_TOKEN*, or just enter your bot's API token right in the [bot.py](https://github.com/codelao/Tier-List-Bot/blob/main/bot.py) script (unsafe)
+Create an environment varibale `TIERLIST_BOT_TOKEN` for your token (recommended), or you can paste it directly into [config.py](https://github.com/codelao/Tier-List-Bot/blob/main/config.py) file (unsafe).
 
 ### macOS/Linux
-*Note:* you need to have Python3 and Git installed in your system before moving to the bot installation steps.
 1. Install
 ```
 git clone https://github.com/codelao/Tier-List-Bot.git && cd Tier-List-Bot && pip3 install -r requirements.txt && chmod +x bot.py
@@ -43,7 +50,6 @@ git clone https://github.com/codelao/Tier-List-Bot.git && cd Tier-List-Bot && pi
 ```
 
 ### Windows 10/11
-*Note:* you need to have Python3 and Git installed in your system before moving to the bot installation steps.
 1. Install
 ```
 git clone https://github.com/codelao/Tier-List-Bot.git && cd Tier-List-Bot && pip3 install -r requirements.txt
